@@ -11,4 +11,4 @@ gpg --import MICOMPA_llave_public.asc
 # Crea un archivo de texto con un mensaje (sin cifrar)
 echo “de que me sirve graduarme de ing si ella nunca vio que para mi ella era mi localhost”> doc_no_cifrado.txt
 # Cifra el archivo usando la llave pública del destinatario (ID 2DF7C0E1202D7C42)
-gpg --output doc_cifrado.txt --encrypt --recipient 153EAC8A9F562E7CB45439792DF7C0E1202D7C42
+gpg --output doc_cifrado.txt --encrypt --recipient 153EAC8A9F562E7CB45439792DF7C0E1202D7C42gpg --edit-key ltenemaza554@gmail.com
