@@ -34,3 +34,5 @@ cd /
 ls -F
 
 ls -i
+
+sudo echo "sapo"> test.txt
