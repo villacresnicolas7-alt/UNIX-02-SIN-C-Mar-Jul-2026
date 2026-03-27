@@ -32,3 +32,5 @@ pwd
 cd / 
 #
 ls -F
+
+ls -i
