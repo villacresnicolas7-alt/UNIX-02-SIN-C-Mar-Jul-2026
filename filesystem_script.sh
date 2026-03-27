@@ -26,3 +26,9 @@ gcc saludo.c -o saludo_bin
 sudo mv saludo_bin /bin
 
 cd /bin
+#vemos en que estamos
+pwd
+#nos volvemos en main 
+cd / 
+#
+ls -F
