@@ -6,3 +6,5 @@ ls
 cd /proc
 #veo la lista de archivos
 ls
+#veo informacion del cpu
+cat cpuinfo
