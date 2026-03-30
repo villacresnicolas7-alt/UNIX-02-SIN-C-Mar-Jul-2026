@@ -8,3 +8,7 @@ sudo apt install parted
 sudo parted -l && echo -e "\n---\n" && lsblk -f && echo -e
 #Checks if the system uses UEFI or BIOS and prints the result.
 [ -d/sys/firmware/efi ] && echo "UEFI" || echo "BIOS" 
+#Creates a file called archivo.txt with the text “esto es un archivo”.
+echo "esto es un archivo" >archivo.txt
+#Shows detailed information about the file archivo.txt (size, permissions, dates).
+stat archivo.txt
