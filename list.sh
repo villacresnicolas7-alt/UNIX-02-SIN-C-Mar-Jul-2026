@@ -8,3 +8,7 @@ sudo sh -c 'echo "chao" >> /etc/archivo_protegido
 # add a chao to the command exist in the finaly
 sudo su && sudo -i
 #we pass temporaly in the mode root
+echo "$home"
+#show what are in it
+echo '$HOME'
+#printe home
