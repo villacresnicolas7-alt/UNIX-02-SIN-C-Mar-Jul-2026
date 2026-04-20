@@ -14,3 +14,11 @@ echo '$HOME'
 #printe home, show the string
 echo 'echo' "hola desde mi primer"' >> hola.sh
 #the echo print the #!/bin/sh and hola.sh is the name to de refactory 
+ls -l hola.sh
+# see the list of the directory
+chmod +x hola.sh
+#give acces to the program ejecute correct forme
+ls - hola.sh
+#another time see the list but with the acces give in the another time
+./hola.sh
+#ejecte the shell in the actual
