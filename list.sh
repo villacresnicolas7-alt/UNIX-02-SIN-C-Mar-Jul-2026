@@ -22,3 +22,11 @@ ls - hola.sh
 #another time see the list but with the acces give in the another time
 ./hola.sh
 #ejecte the shell in the actual
+apt install cowsay
+#need sudo beacuse need to instal a packet
+mkdir ~/mi_carpeta
+#another view to the directory more spacecly
+touch /etc/prueba.txt
+#requere to sudo beacuse need too and in the directory
+ls /etc
+#see the list en the directory
