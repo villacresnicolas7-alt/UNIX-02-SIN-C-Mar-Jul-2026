@@ -9,6 +9,8 @@ sudo sh -c 'echo "chao" >> /etc/archivo_protegido
 sudo su && sudo -i
 #we pass temporaly in the mode root
 echo "$home"
-#show what are in it
+#show what are in it, extend the direcotory
 echo '$HOME'
-#printe home
+#printe home, show the string
+echo 'echo' "hola desde mi primer"' >> hola.sh
+#the echo print the #!/bin/sh and hola.sh is the name to de refactory 
