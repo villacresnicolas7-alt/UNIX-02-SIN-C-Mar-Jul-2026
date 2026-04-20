@@ -5,4 +5,6 @@ echo "hola" | sudo tee /etc/archivo_protegido > /dev/null
 cat /etc/archivo_protegido
 #let me see the archiv absolutly
 sudo sh -c 'echo "chao" >> /etc/archivo_protegido 
-# and a chao to the command exist in the finaly
+# add a chao to the command exist in the finaly
+sudo su && sudo -i
+#we pass temporaly in the mode root
