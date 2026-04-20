@@ -27,6 +27,13 @@ apt install cowsay
 mkdir ~/mi_carpeta
 #another view to the directory more spacecly
 touch /etc/prueba.txt
-#requere to sudo beacuse need too and in the directory
+#requere to sudo beacuse need too add in the directory
 ls /etc
+#view the archive ejectuble
 #see the list en the directory
+ls -l prueba.txt
+#view the list in te prueba.txt
+chmod 755 prueba.txt
+#ejectute witj permisios 755
+chmod 600 prueba.txt
+#creat the archive with permision 600
