@@ -51,3 +51,5 @@ chmod u+x hello.sh
 ls -l hello.sh
 # Execute the script
 ./hello.sh
+# Change file owner to root
+sudo chown root hello.sh
