@@ -25,3 +25,5 @@ cd /
 #we welcome  back in the rame root likewize main
 ls -l /var/log/
 # List detailed log files
+ls -lt /var/log 
+#It will sort the files by their timestamp
