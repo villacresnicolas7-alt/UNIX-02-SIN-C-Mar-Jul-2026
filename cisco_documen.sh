@@ -53,3 +53,5 @@ ls -l hello.sh
 ./hello.sh
 # Change file owner to root
 sudo chown root hello.sh
+#show the list in the directry
+cat animals.txt  
