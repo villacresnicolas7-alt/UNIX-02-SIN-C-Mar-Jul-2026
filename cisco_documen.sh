@@ -43,3 +43,11 @@ sudo sl
 cd ~/Documents
 # Show detailed file information
 ls -l hello.sh
+# Run script from current directory
+./hello.sh
+# Add execute permission for owner
+chmod u+x hello.sh
+# Show updated file permissions
+ls -l hello.sh
+# Execute the script
+./hello.sh
