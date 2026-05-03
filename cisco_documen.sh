@@ -5,3 +5,6 @@ ls Documenst
 aptitude moo 
 #Display aptitude's hidden easter egg
 ls -l
+#show more specifically
+ls -r
+#reverse the result
