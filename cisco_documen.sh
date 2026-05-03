@@ -23,3 +23,5 @@ cd
 #this comand is for chance the directory 
 cd /
 #we welcome  back in the rame root likewize main
+ls -l /var/log/
+# List detailed log files
