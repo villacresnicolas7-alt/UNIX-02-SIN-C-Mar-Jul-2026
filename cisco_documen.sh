@@ -29,3 +29,5 @@ ls -lt /var/log
 #It will sort the files by their timestamp
 ls -l -S /var/log    
 #It will sort for the size of the archivemns 
+ ls -lSr /var/log
+#will reverse the order of any type of ordering
