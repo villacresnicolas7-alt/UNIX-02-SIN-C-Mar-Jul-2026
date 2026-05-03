@@ -39,3 +39,7 @@ sl
 #avoid ejecuted comands privileged
 sudo sl
 #permiss privileged
+# Change to Documents directory
+cd ~/Documents
+# Show detailed file information
+ls -l hello.sh
