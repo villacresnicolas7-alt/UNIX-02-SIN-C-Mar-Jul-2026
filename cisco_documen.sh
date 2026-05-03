@@ -58,3 +58,5 @@ cat animals.txt
 cat alpha.txt    
 # Show first lines of file
 head alpha.txt
+# Show last lines of file
+tail alpha.txt
