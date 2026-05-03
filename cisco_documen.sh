@@ -55,3 +55,6 @@ ls -l hello.sh
 sudo chown root hello.sh
 #show the list in the directry
 cat animals.txt  
+cat alpha.txt    
+# Show first lines of file
+head alpha.txt
