@@ -35,3 +35,5 @@ su  -
 #a password fot the virtual machine
 exit
 #leave the terminal
+sl
+#avoid ejecuted comands privileged
