@@ -15,3 +15,7 @@ ls -rl
 #The result of using both options will be a long listing in reverse alphabetical order.
 aptitude -v moo
 #insist in see more easter eggs
+-v 
+#insist more 
+pwd
+#show me in wich directory i am
