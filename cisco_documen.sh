@@ -21,3 +21,5 @@ pwd
 #show me in wich directory i am
 cd
 #this comand is for chance the directory 
+cd /
+#we welcome  back in the rame root likewize main
