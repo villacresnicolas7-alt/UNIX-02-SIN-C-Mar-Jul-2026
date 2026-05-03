@@ -60,3 +60,5 @@ cat alpha.txt
 head alpha.txt
 # Show last lines of file
 tail alpha.txt
+# Copy file to current directory
+cp /etc/passwd .
