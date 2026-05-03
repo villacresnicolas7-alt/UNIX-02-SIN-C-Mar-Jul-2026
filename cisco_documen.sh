@@ -37,3 +37,5 @@ exit
 #leave the terminal
 sl
 #avoid ejecuted comands privileged
+sudo sl
+#permiss privileged
