@@ -19,3 +19,5 @@ aptitude -v moo
 #insist more 
 pwd
 #show me in wich directory i am
+cd
+#this comand is for chance the directory 
