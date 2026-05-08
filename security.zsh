@@ -12,3 +12,7 @@ ls -la
 #Lists all files and directories with detailed information, including hidden files
 cat /etc/group | head -10 
 #Displays the first 10 lines of /etc/group, which contains system group information
+groups 
+#Shows the groups of the current user
+groups $USER 
+#Shows the groups of a specific user stored in the $USER variable
