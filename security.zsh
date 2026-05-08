@@ -16,3 +16,7 @@ groups
 #Shows the groups of the current user
 groups $USER 
 #Shows the groups of a specific user stored in the $USER variable
+id -u
+id -g
+id -G
+#Displays all group IDs of the current user
