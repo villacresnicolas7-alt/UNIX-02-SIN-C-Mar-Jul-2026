@@ -28,3 +28,5 @@ grep "desarrolladores\|operaciones\|servicios_web" /etc/group
 #Search for specific group names within the system group file.
 groupadd --help
 #Display the help menu and available options for creating groups.
+grep "GID_MIN\|GID_MAX\|SYS_GID" /etc/login.defs
+#Filter the configuration file to show the defined range and limits for Group IDs.
