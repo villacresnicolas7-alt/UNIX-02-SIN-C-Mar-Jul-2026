@@ -20,3 +20,11 @@ id -u
 id -g
 id -G
 #Displays all group IDs of the current user
+mkdir ~/proyecto_unix/
+#Creates a directory named "proyecto_unix" inside the user's home folder (~)
+ls -la ~/proyecto_unix/
+#Lists all files inside "proyecto_unix" with detailed info
+grep "desarrolladores\|operaciones\|servicios_web" /etc/group
+#Search for specific group names within the system group file.
+groupadd --help
+#Display the help menu and available options for creating groups.
