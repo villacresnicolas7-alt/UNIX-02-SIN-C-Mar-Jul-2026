@@ -38,3 +38,7 @@ addgroup --system cache_web
 #Create a system group for background services or system processes.
 grep "diseo\|marketing\| cache_web" /etc/group
 #Verify the creation of the specified groups by searching the system group database.
+usermod -aG desarrolladores $USER
+#Append the current user to the "desarrolladores" group without removing existing ones.
+usermod -aG diseo $USER
+#Add the current user to the "diseo" secondary group to grant relevant permissions.
