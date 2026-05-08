@@ -10,3 +10,5 @@ touch test.txt
 #Creates an empty file named test.txt
 ls -la 
 #Lists all files and directories with detailed information, including hidden files
+cat /etc/group | head -10 
+#Displays the first 10 lines of /etc/group, which contains system group information
