@@ -30,3 +30,11 @@ groupadd --help
 #Display the help menu and available options for creating groups.
 grep "GID_MIN\|GID_MAX\|SYS_GID" /etc/login.defs
 #Filter the configuration file to show the defined range and limits for Group IDs.
+addgroup diseo
+#Create a new standard user group named "diseo".
+addgroup --gid 2100 marketing
+#Create a group named "marketing" with a specific Group ID of 2100.
+addgroup --system cache_web
+#Create a system group for background services or system processes.
+grep "diseo\|marketing\| cache_web" /etc/group
+#Verify the creation of the specified groups by searching the system group database.
