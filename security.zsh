@@ -64,4 +64,5 @@ ls -la ~/lab_chgrp/reportes/
 chgrp desarrolladores ~/lab_chgrp/proyectos/app.py 
 #Changes the group ownership of the app.py file to the desarrolladores group.
 ls -la ~/lab_chgrp/proyectos/
-#Displays detailed file information for the proyectos directory, showing updated group ownership for app.py.
+Displays detailed file information for the proyectos directory, showing updated group ownership for app.py. #chgrp diseo \ ~/lab_chgrp/proyectos/config.json \~/lab_chgrp/reportes/informe.txt
+#Changes the group ownership of config.json and informe.txt to the diseo group.
