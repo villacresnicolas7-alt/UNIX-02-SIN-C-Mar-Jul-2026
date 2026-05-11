@@ -44,3 +44,7 @@ usermod -aG diseo $USER
 #Add the current user to the "diseo" secondary group to grant relevant permissions.
 grep "desarolladores\|diseo" /etc/group
 #Searches for lines containing "desarolladores" or "diseo" in the system's group definition file.
+usermod -aG grupo_temporal Nicolas-pinto
+#Adds user "Nicolas-pinto" to "grupo_temporal" without removing them from existing groups.
+id $USER # tiene grupo_temporal
+#and all supplementary groups your account belongs to, confirming that grupo_temporal is currently linked to your session.
