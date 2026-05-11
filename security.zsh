@@ -61,3 +61,7 @@ ls -la ~/lab_chgrp/proyectos/
 #Creates a directory structure with three subfolders and populates them with files, then lists the contents.
 ls -la ~/lab_chgrp/reportes/ 
 #Lists the detailed information of all files and hidden items within the reportes subdirectory.
+chgrp desarrolladores ~/lab_chgrp/proyectos/app.py 
+#Changes the group ownership of the app.py file to the desarrolladores group.
+ls -la ~/lab_chgrp/proyectos/
+#Displays detailed file information for the proyectos directory, showing updated group ownership for app.py.
