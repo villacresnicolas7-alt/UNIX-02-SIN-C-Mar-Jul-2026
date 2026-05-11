@@ -50,3 +50,5 @@ id $USER # tiene grupo_temporal
 #and all supplementary groups your account belongs to, confirming that grupo_temporal is currently linked to your session.
 usermod -G desarrolladores $USER
 #Sets the user's supplementary groups to only "desarrolladores," removing them from all others.
+usermod -aG diseño,marketing,grup_temporal
+#Adds the current user to the diseño, marketing, and grup_temporal groups while keeping current ones.
