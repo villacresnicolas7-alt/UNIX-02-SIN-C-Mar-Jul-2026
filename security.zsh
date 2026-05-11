@@ -66,3 +66,9 @@ chgrp desarrolladores ~/lab_chgrp/proyectos/app.py
 ls -la ~/lab_chgrp/proyectos/
 Displays detailed file information for the proyectos directory, showing updated group ownership for app.py. #chgrp diseo \ ~/lab_chgrp/proyectos/config.json \~/lab_chgrp/reportes/informe.txt
 #Changes the group ownership of config.json and informe.txt to the diseo group.
+chgrp -R desarrolladores ~/lab_chgrp/scripts/
+#Recursively changes the group ownership of the scripts directory and all its contents to desarrolladores using root privileges.
+ls -laR ~/lab_chgrp/scripts/
+#Recursively lists all files and detailed permissions within the scripts directory and its subdirectories.
+chgrp -Rv diseo ~/lab_chgrp/reportes/
+#Recursively changes the group ownership of the reportes directory and its contents to diseo, providing verbose output for each action.
