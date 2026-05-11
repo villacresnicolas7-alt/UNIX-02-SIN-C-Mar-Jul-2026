@@ -48,3 +48,5 @@ usermod -aG grupo_temporal Nicolas-pinto
 #Adds user "Nicolas-pinto" to "grupo_temporal" without removing them from existing groups.
 id $USER # tiene grupo_temporal
 #and all supplementary groups your account belongs to, confirming that grupo_temporal is currently linked to your session.
+usermod -G desarrolladores $USER
+#Sets the user's supplementary groups to only "desarrolladores," removing them from all others.
