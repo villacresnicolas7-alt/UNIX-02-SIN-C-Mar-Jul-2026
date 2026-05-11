@@ -52,3 +52,12 @@ usermod -G desarrolladores $USER
 #Sets the user's supplementary groups to only "desarrolladores," removing them from all others.
 usermod -aG diseño,marketing,grup_temporal
 #Adds the current user to the diseño, marketing, and grup_temporal groups while keeping current ones.
+mkdir -p ~/lab_chgrp/{proyectos,reportes,scripts}
+touch ~/lab_chgrp/proyectos/app.py
+touch ~/lab_chgrp/proyectos/config.json
+touch ~/lab_chgrp/reportes/informe.txt
+touch ~/lab_chgrp/scripts/deploy.sh
+ls -la ~/lab_chgrp/proyectos/
+#Creates a directory structure with three subfolders and populates them with files, then lists the contents.
+ls -la ~/lab_chgrp/reportes/ 
+#Lists the detailed information of all files and hidden items within the reportes subdirectory.
