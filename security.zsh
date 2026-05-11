@@ -42,3 +42,5 @@ usermod -aG desarrolladores $USER
 #Append the current user to the "desarrolladores" group without removing existing ones.
 usermod -aG diseo $USER
 #Add the current user to the "diseo" secondary group to grant relevant permissions.
+grep "desarolladores\|diseo" /etc/group
+#Searches for lines containing "desarolladores" or "diseo" in the system's group definition file.
