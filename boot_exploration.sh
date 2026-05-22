@@ -37,3 +37,48 @@ chmod 755 prueba.txt
 #ejectute witj permisios 755
 chmod 600 prueba.txt
 #creat the archive with permision 600
+
+
+
+#final
+
+# View the numeric identity of the current user
+# Shows: user ID, primary group, and secondary groups
+id
+
+# View all system users (first 10 lines)
+cat /etc/passwd | head -10
+
+# View all system groups (first 10 lines)
+cat /etc/group | head -10
+
+# Check which groups the current user belongs to
+groups
+groups $USER
+
+# View numeric UID and GID values separately
+id -u   # Returns only the numeric User ID
+id -g   # Returns only the primary Group ID
+id -G   # Returns all Group IDs the user belongs to
+
+# Filter a specific group entry from /etc/group
+# Format: group_name:password:GID:members
+cat /etc/group | grep codespace
+
+# Create a directory and verify its group owner
+# The third column in ls -la output shows the group owner
+mkdir ~/proyecto_unix/
+ls -la ~/proyecto_unix/
+
+# Show group names instead of just IDs
+id -Gn
+
+# Check identity of a specific user (not just current)
+id root
+
+# View only group names the current user belongs to
+groups root
+
+# Long format of /etc/passwd to see all fields:
+# username:password:UID:GID:comment:home:shell
+awk -F: '{print $1, $3, $4}' /etc/passwd | head -10
