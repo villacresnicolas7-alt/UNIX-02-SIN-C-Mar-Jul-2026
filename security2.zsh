@@ -12,3 +12,13 @@ echo "Grupo actual: $(id -gn)"
 #Create a file before newgrp
 touch ~/antes_de_newgrp.txt
 ls -la ~/antes_de_newgrp.txt
+# Install the package that contains the newgrp command
+apt install util-linux-extra
+# Create the group 'desarrolladores'
+groupadd desarrolladores
+# Switch current session to the 'desarrolladores' group
+newgrp desarrolladores
+# Create an empty file called archivo.txt
+touch archivo.txt
+# List all files with details (permissions, owner, group, size, date)
+ls -la
