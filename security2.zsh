@@ -7,3 +7,8 @@ ls -la ~/test_grupo_heredado.txt
 # is the group main of the user
 groups
 #see the groups 
+#See current group
+echo "Grupo actual: $(id -gn)"
+#Create a file before newgrp
+touch ~/antes_de_newgrp.txt
+ls -la ~/antes_de_newgrp.txt
