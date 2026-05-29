@@ -33,3 +33,11 @@ ls -la ~/despues_de_newgrp.txt
 # Create new directory
 mkdir -p ~/proyecto_dev/src
 ls -la ~/
+# Print the PID of the current shell
+echo $$
+# Output: 572
+# Open a subshell by switching group with newgrp
+newgrp
+# Print the PID again - this is a NEW shell created by newgrp
+echo $$
+# Output: a different number, because newgrp spawns a child shell
