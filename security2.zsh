@@ -22,3 +22,11 @@ newgrp desarrolladores
 touch archivo.txt
 # List all files with details (permissions, owner, group, size, date)
 ls -la
+# PID del shell actual
+echo $$
+# PID de la subshell
+(echo $$)
+# Create a file called despues_de_newgrp.txt in the home directory
+touch ~/despues_de_newgrp.txt
+# Show the file details (permissions, owner, group, size, date)
+ls -la ~/despues_de_newgrp.txt
