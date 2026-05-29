@@ -30,3 +30,6 @@ echo $$
 touch ~/despues_de_newgrp.txt
 # Show the file details (permissions, owner, group, size, date)
 ls -la ~/despues_de_newgrp.txt
+# Create new directory
+mkdir -p ~/proyecto_dev/src
+ls -la ~/
