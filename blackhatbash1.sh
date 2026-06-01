@@ -8,3 +8,9 @@ ps -ef
 df --human-readable
 #!/bin/bash
 #!/usr/bin/env bash
+bash -x
+
+bash -r
+
+#chmod u+x blackhatbash1.sh
+#./blackhatbash1.sh
