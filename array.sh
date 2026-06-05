@@ -10,3 +10,4 @@ chmod u+x array.sh
 ./array.sh
 
 unset IP_ADDRESSES[1]
+IP_ADDRESSES[0]="192.168.1.10"
