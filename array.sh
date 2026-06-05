@@ -1,8 +1,10 @@
 # Sets an array 
 IP_ADDRESSES=(192.168.1.1 192.168.1.2 192.168.1.3)
 set +x
-# Prints all elements in the array 
+
 echo "${IP_ADDRESSES[*]}"
 set -x
-# Prints only the first element in the array 
+
 echo "${IP_ADDRESSES[0]}"
+chmod u+x array.sh
+./array.sh
