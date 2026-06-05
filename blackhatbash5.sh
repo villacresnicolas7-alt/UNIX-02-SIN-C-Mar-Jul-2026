@@ -14,3 +14,5 @@ ls -l / 1> stdout.txt 2> stderr.txt
 cat stderr.txt
 ls -l / 1> stdout.txt 2>> stderr.txt
 cat stderr.txt
+lzl 2> error.txt
+cat error.txt
