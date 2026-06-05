@@ -11,7 +11,3 @@ chmod u+x array.sh
 
 unset IP_ADDRESSES[1]
 IP_ADDRESSES[0]="192.168.1.10"
-echo "Sleeping for 10 seconds..." 
-sleep 10 & 
-touch test123 
-rm test123
