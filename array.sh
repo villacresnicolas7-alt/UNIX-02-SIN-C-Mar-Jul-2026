@@ -8,3 +8,5 @@ set -x
 echo "${IP_ADDRESSES[0]}"
 chmod u+x array.sh
 ./array.sh
+
+unset IP_ADDRESSES[1]
