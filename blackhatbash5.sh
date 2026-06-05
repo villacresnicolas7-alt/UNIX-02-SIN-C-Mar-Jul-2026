@@ -12,3 +12,5 @@ cat output.txt
 ls -l / &> stdout_and_stderr.txt
 ls -l / 1> stdout.txt 2> stderr.txt
 cat stderr.txt
+ls -l / 1> stdout.txt 2>> stderr.txt
+cat stderr.txt
