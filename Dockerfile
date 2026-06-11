@@ -43,10 +43,8 @@ ENV DEBIAN_FRONTEND=noninteractive \
 # ----------------------------------------------------------------------------
 # Pre-respuesta a una pregunta interactiva de Wireshark
 # ----------------------------------------------------------------------------
-# Wireshark/tshark PREGUNTA durante su instalación si los usuarios
-# normales (no-root) deben poder capturar paquetes. Como en el contenedor
-# siempre somos root, respondemos "false" POR ADELANTADO usando
-# debconf-set-selections para que no detenga el build esperando input.
+# Wireshark/tshark Ask the normis during the install, They may cach the packages.
+# Like in the container always are root we answer false for advanced cause the build dont stop waiting the input
 RUN echo "wireshark-common wireshark-common/install-setuid boolean false" \
     | debconf-set-selections
 
