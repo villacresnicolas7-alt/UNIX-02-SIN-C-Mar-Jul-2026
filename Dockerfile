@@ -180,12 +180,10 @@ RUN git config --system --add safe.directory '*' \
  && git lfs install --system
 
 # ----------------------------------------------------------------------------
-# CMD: comando que se ejecuta por defecto al arrancar el contenedor
+# CMD
 # ----------------------------------------------------------------------------
-# Lanza una shell bash interactiva. Codespaces la sobrescribe con su
-# propia terminal integrada de VS Code, pero es buena práctica dejarla
-# definida para que la imagen sea usable también con Docker puro.
-# Prompt del curso para bash
+# Launch an shell bash, Codespaces the overwrite in the own terminal 
+# it is an good practis let it can use with docker pure 
 RUN chsh -s /usr/bin/zsh root
 RUN cat >> /root/.zshrc <<'EOF'
 PROMPT='%F{cyan}[Nicolas-pinto]%f %F{yellow}%~%f %(?.%F{green}ok.%F{red}bad %?)%f %#'
