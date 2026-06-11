@@ -1,53 +1,39 @@
 # ============================================================================
 #  Dockerfile — "receta" para construir la imagen del curso
 # ============================================================================
-#  Un Dockerfile es un archivo de texto con instrucciones paso a paso que
-#  Docker (o Codespaces) lee de arriba hacia abajo para fabricar una
-#  "imagen". Una imagen es como un molde congelado de un sistema Linux
-#  listo para usar; cada vez que abres el Codespace, se crea un
-#  "contenedor" a partir de ese molde.
-#
-#  Analogía: la imagen es el PLANO, el contenedor es la CASA construida
-#  con ese plano. Puedes construir muchas casas iguales a partir de un
-#  solo plano, y si destruyes una casa el plano sigue intacto.
-#
-#  Cada instrucción (FROM, ENV, RUN...) crea una "capa". Docker guarda
-#  esas capas en caché: si no cambias las primeras líneas, no las
-#  reconstruye y el siguiente build es casi instantáneo.
+#  An Dockerfile is a file of text how docker reads for makes an picture
+#  every time you open the codespace, your make a container 
+
+#  Each instruction (FROM, ENV, RUN...) makes a layer what docker save
+#  thats layers in the cahce 
 # ============================================================================
 
 
 # ----------------------------------------------------------------------------
 # FROM: imagen base sobre la que vamos a construir
 # ----------------------------------------------------------------------------
-# En lugar de partir de cero, partimos de la imagen oficial de Kali Linux
-# en su versión "rolling" (actualización continua, siempre al día).
-# Todo lo que instalemos más abajo se apila ENCIMA de esta base.
+# We chance the stage make all since cero and swich for started in the picture oficial of Kali Linux
+# in their version always to day and those is stacked over the base
 FROM kalilinux/kali-rolling:latest
 
 
 # ----------------------------------------------------------------------------
 # ENV: variables de entorno permanentes dentro del contenedor
 # ----------------------------------------------------------------------------
-# Las variables de entorno son "ajustes globales" que cualquier programa
-# del sistema puede leer. Se escriben en MAYÚSCULAS por convención.
+# The variables can  use for each program what the program can read
 #
 #   DEBIAN_FRONTEND=noninteractive
-#     Le dice al instalador de paquetes (apt) "no me hagas preguntas
-#     interactivas, asume respuestas por defecto". Sin esto, algunos
-#     paquetes pausarían el build esperando que pulsemos una tecla y se
-#     quedaría colgado para siempre (porque no hay nadie mirando).
+#     this say "dont make me question and assume answers". without this, some paquets 
+#     can be wait for the instruction and stay bug.
 #
 #   LANG / LC_ALL=es_ES.UTF-8
-#     Configuran idioma y codificación de caracteres. UTF-8 es lo que
-#     permite que acentos, ñ, €, emojis, etc. se muestren bien.
+#     Config the luangues and the codificacion of the main carecters
 #
 #   TERM=xterm-256color
-#     Le indica a los programas que la terminal admite 256 colores, para
-#     que vim, nvim, htop, etc. se vean con todos sus colores.
+#     Make the programs can accept the colors, around of the 256 them
+#     vim, nvim, htop, etc.
 #
-# La barra invertida "\" al final de cada línea significa "esto continúa
-# en la línea siguiente". Solo es para legibilidad.
+#  "\" Means "This contnue in the next line
 ENV DEBIAN_FRONTEND=noninteractive \
     LANG=es_ES.UTF-8 \
     LC_ALL=es_ES.UTF-8 \
