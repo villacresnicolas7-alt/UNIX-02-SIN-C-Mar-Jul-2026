@@ -169,13 +169,11 @@ SHELL ["/bin/bash", "-c"]
 # this is where the terminal open when you start the container
 WORKDIR /workspaces
 
-# Configuración de Git para el contenedor:
-# - safe.directory *: confía en cualquier repo montado (necesario porque
-#   /workspaces/... tiene un UID distinto al de root dentro del container).
-# - init.defaultBranch main: evita warnings de "master vs main" en git init.
-# - pull.rebase false: merge por defecto al hacer pull (más intuitivo)
-# - git lfs install --system: registra los hooks de LFS globalmente para
-#   que, si un repo los necesita, funcionen sin sorpresas.
+# git config for the container
+# safe directory trust any repo mounted
+# defaultBranch avoid warnings between master and main
+# pull rebase false use merge by default
+# lfs install register the hooks global
 RUN git config --system --add safe.directory '*' \
  && git config --system init.defaultBranch main \
  && git config --system pull.rebase false \
