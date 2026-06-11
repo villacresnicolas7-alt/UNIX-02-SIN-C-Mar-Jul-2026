@@ -1,5 +1,5 @@
 # ============================================================================
-#  Dockerfile — "receta" para construir la imagen del curso
+#  Dockerfile 
 # ============================================================================
 #  An Dockerfile is a file of text how docker reads for makes an picture
 #  every time you open the codespace, your make a container 
@@ -10,7 +10,7 @@
 
 
 # ----------------------------------------------------------------------------
-# FROM: imagen base sobre la que vamos a construir
+# FROM: base image on which we are going to build
 # ----------------------------------------------------------------------------
 # We chance the stage make all since cero and swich for started in the picture oficial of Kali Linux
 # in their version always to day and those is stacked over the base
@@ -18,7 +18,7 @@ FROM kalilinux/kali-rolling:latest
 
 
 # ----------------------------------------------------------------------------
-# ENV: variables de entorno permanentes dentro del contenedor
+# ENV: environment variables
 # ----------------------------------------------------------------------------
 # The variables can  use for each program what the program can read
 #
@@ -41,7 +41,7 @@ ENV DEBIAN_FRONTEND=noninteractive \
 
 
 # ----------------------------------------------------------------------------
-# Pre-respuesta a una pregunta interactiva de Wireshark
+# Pre-answer
 # ----------------------------------------------------------------------------
 # Wireshark/tshark Ask the normis during the install, They may cach the packages.
 # Like in the container always are root we answer false for advanced cause the build dont stop waiting the input
@@ -50,7 +50,7 @@ RUN echo "wireshark-common wireshark-common/install-setuid boolean false" \
 
 
 # ----------------------------------------------------------------------------
-# RUN: ejecutar comandos durante la construcción de la imagen
+# runs commands while picture stay proyect
 # ----------------------------------------------------------------------------
 # here we install all the sofware 
 #
