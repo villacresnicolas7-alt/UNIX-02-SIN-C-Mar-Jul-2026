@@ -52,44 +52,40 @@ RUN echo "wireshark-common wireshark-common/install-setuid boolean false" \
 # ----------------------------------------------------------------------------
 # RUN: ejecutar comandos durante la construcción de la imagen
 # ----------------------------------------------------------------------------
-# Aquí instalamos TODO el software del curso en un solo RUN.
+# here we install all the sofware 
 #
-#   apt-get update          -> actualiza la lista de paquetes disponibles
-#   apt-get install         -> descarga e instala los paquetes listados
-#     -y                    -> responde "sí" automáticamente
-#     --no-install-recommends -> instala SOLO lo esencial (no los extras
-#                                sugeridos). Ahorra cientos de MB.
+#   apt-get update          -> update
+#   apt-get install         -> download and install packages
+#     -y                    -> Say Yes 
+#     --no-install-recommends -> install the important things
 #
-# ¿Por qué un solo RUN gigante y no 10 RUN pequeños?
-# Porque CADA RUN crea una capa nueva en la imagen. Menos capas = imagen
-# más pequeña, más rápida de construir y de descargar.
+# ¿Why one run Biggest and not ten runs smallest?
+# Each run makes another layer and makes the pic more fat
 #
-# El "&&" encadena comandos: ejecuta el siguiente SOLO SI el anterior
-# terminó bien. Si algo falla, el build se detiene con error (que es lo
-# que queremos: mejor un error claro que una imagen rota).
+# The "&&" Just the another command finish good ejecute if sommtime makes wrong 
+#The run output and error
 RUN apt-get update && apt-get install -y --no-install-recommends \
     \
-    # === Editores de texto y shells (intérpretes de comandos) ===
+    #interpreters
     neovim \
     vim \
     zsh \
     bash-completion \
     \
-    # === Herramientas de 4ta generación ===
-    # Estas son las protagonistas de las Unidades 2, 3 y 4:
+    # tools
     perl \
     make \
     gawk \
     sed \
     grep \
     \
-    # === Utilidades básicas de UNIX ===
+    # === tools basics  ===
     # coreutils trae cat, ls, head, tail, sort, cut, tr, etc.
     # findutils trae find y xargs.
     # procps trae ps, top, kill (gestión de procesos).
-    # less = paginador para leer archivos largos.
-    # tree = muestra directorios como árbol.
-    # jq = procesa JSON desde la línea de comandos.
+    # less = read long archive.
+    # tree = mshow directorys.
+    # jq = processes jason.
     coreutils \
     findutils \
     procps \
@@ -97,15 +93,12 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     tree \
     jq \
     \
-    # === Páginas de manual (comando `man`) ===
-    # La imagen base de Kali viene sin documentación para
-    # ahorrar espacio. La reinstalamos porque en el curso "man bash" o
-    # "man grep" es material de consulta obligada.
+    # manual pages
     man-db \
     manpages \
     manpages-posix \
     \
-    # === Red básica y utilidades de descarga ===
+    #  basic red and toos of the downloader 
     curl \
     wget \
     git \
@@ -113,22 +106,22 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     ca-certificates \
     locales \
     \
-    # === Linter (revisor automático de errores) para scripts Bash ===
+    # === Linter (automatic error checkers) for bash
     shellcheck \
     \
-    # === Reconocimiento y escaneo de red ===
-    # nmap = el escáner de puertos más famoso.
-    # masscan = escaneo masivo de rangos grandes de IPs.
+    # === scaner of red ===
+    # nmap = The most famues.
+    # masscan = eAn scane masive of ips.
     nmap \
     masscan \
     \
-    # === Captura y análisis de paquetes de red ===
-    # tcpdump = capturador clásico por terminal.
-    # tshark = versión de terminal de Wireshark.
+    # === Network packet capture and analysis===
+    # tcpdump = capture clasic 
+    # tshark = version of wireshark
     tcpdump \
     tshark \
     \
-    # === Utilidades de red variadas ===
+    # === tools of red varied ===
     netcat-traditional \
     socat \
     dnsutils \
@@ -139,29 +132,26 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     net-tools \
     iputils-ping \
     \
-    # === Anonimato: Tor y similares ===
-    # tor = cliente de la red Tor.
-    # torsocks = "envoltorio" que hace pasar cualquier comando por Tor.
-    # proxychains4 = encadena múltiples proxies.
+    # === Anonymity: Tor and similar===
+    # tor = client Tor.
+    # torsocks = "wrapper" that makes any command go through Tor.
+    # proxychains4 = join proxies.
     # obfs4proxy = ofusca el tráfico de Tor para evadir bloqueos.
     tor \
     torsocks \
     proxychains4 \
     obfs4proxy \
     \
-    # === Cliente HTTP más legible que curl para aprender ===
+    # === customer HTTP ===
     httpie \
     \
- # --- Después de instalar, activamos el idioma español ---
- # sed busca "# es_ES.UTF-8" en /etc/locale.gen y le quita el "#" para
- # activar esa línea. Luego locale-gen compila los archivos de idioma.
+ # final clean for reduce the size of the image
+ # if we delete in another run dont save space
  && sed -i 's/# es_ES.UTF-8/es_ES.UTF-8/' /etc/locale.gen \
  && locale-gen \
  \
- # --- Limpieza final: reducir el tamaño de la imagen ---
- # apt deja archivos de caché que ya no necesitamos después de instalar.
- # Borrarlos aquí (en el mismo RUN) hace la capa final más pequeña.
- # Si los borráramos en otro RUN, seguirían ocupando en la capa anterior.
+ # final clean for reduce the size of the image
+ # if we delete in another run dont save space
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 
