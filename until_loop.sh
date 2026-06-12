@@ -16,3 +16,6 @@ until [[ -s "${FILE}" ]]; do
 done
 # The file now has content
 echo "${FILE} appears to have some content in it!"
+#du -sb output.txt
+#0 output.txt
+#echo "until_loop_will_now_stop!" > output.txt
