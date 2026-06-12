@@ -6,3 +6,4 @@ if [[   "${VARIABLE_ONE}" -gt "${VARIABLE_TWO}" ]]; then
 else
  echo "${VARIABLE_ONE} is less than ${VARIABLE_TWO}."
 fi
+#integer
