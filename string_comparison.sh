@@ -6,3 +6,4 @@ if [[   "${VARIABLE_ONE}" == "${VARIABLE_TWO}"  ]]; then
 else
  echo "They are not equal!"
 fi
+#string
