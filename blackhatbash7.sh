@@ -32,3 +32,7 @@ awk 'NR < 10' text.csv
 grep "42.236.10.117" log.txt
 awk '{print $7}'
 grep "42.236.10.117" tex.csv | awk '{print $7}'
+sed 's/Mozilla/Godzilla/g' log.txt
+grep "Godzilla" log.txt
+grep "Mozilla" log.txt
+sed 's/Mozilla/Godzilla/g' log.txt > newlog.txt
